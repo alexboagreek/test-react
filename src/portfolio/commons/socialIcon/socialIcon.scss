@@ -1,0 +1,36 @@
+.social_share {
+  li {
+    margin: 6px;
+
+    a {
+      width: 50px;
+      height: 50px;
+      line-height: 44px;
+      display: inline-block;
+      border: 2px solid rgba(198, 201, 216, .75);
+      color: rgba(198, 201, 216, .75);
+      border-radius: 100%;
+      text-align: center;
+      @media (max-width: 992px) {
+        width: 40px;
+        height: 40px;
+      }
+      &:hover {
+        background:  rgb(12, 112, 12);;
+        border-color: rgb(12, 112, 12);;
+        color: #fff;
+        box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .1);
+      }
+
+      img {
+        max-height: 20px;
+        max-width: 20px;
+        @media (max-width: 992px) {
+          vertical-align: baseline;
+        }
+      }
+
+    }
+
+  }
+}

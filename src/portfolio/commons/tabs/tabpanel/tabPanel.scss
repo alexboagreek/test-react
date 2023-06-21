@@ -1,0 +1,42 @@
+.tab_panel {
+  display: none;
+  height: 238px;
+  @media (max-width: 992px) {
+    margin: 0 106px;
+  }
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+  ul {
+    padding: 20px 0 0 0;
+    margin: 0;
+    list-style: none;
+    li {
+      color: rgba(198,201,216,.75);
+      font-size: 16px;
+      line-height: inherit;
+      margin-bottom: 15px;
+      font-weight: 300;
+      span, p {
+        font-size: 16px;
+      }
+      span:first-child {
+        font-weight: 500;
+      }
+      span:last-child {
+        font-weight: 300;
+        display: block;
+      }
+    }
+    .personal_quality {
+      &_item {
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.visible {
+  display: block;
+}

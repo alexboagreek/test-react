@@ -1,0 +1,137 @@
+.header {
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  padding: 0 50px;
+  width: 100%;
+  background: transparent;
+  transition: .3s;
+  @media (max-width: 992px) {
+    padding: 10px 30px;
+  }
+  &_wrapper {
+    padding: 20px 0;
+    transition: .3s;
+
+    .header_left {
+      .logo {
+        height: 60px;
+        width: 60px;
+        @media (max-width: 992px) {
+          height: 30px;
+          width: 30px;
+        }
+        img {
+          height: 100%;
+          border-radius: 4px;
+
+        }
+      }
+
+      .menu_nav {
+
+        .main_menu {
+          margin-left: 50px;
+          display: flex;
+          justify-content: flex-end;
+          flex-wrap: wrap;
+          &_open {
+            right: 0;
+          }
+          &_close {
+            right: -61vw;
+          }
+          @media (max-width: 992px) {
+            background: #101010;
+            width: 60vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            z-index: 99;
+            padding: 55px;
+            transition: all .8s cubic-bezier(.77,.2,.05,1);
+            display: block;
+            overflow-y: auto;
+          }
+        }
+      }
+    }
+
+    .header_right {
+      .social_inner {
+        padding: 0;
+        margin: -6px;
+
+        li {
+          margin: 6px;
+          opacity: .8;
+          border: 0;
+          width: 35px;
+          height: auto;
+          text-align: left;
+          line-height: inherit;
+          font-size: 16px;
+          transition: all .4s ease-in-out 0s;
+
+          &:hover {
+            transform: translateY(-3px);
+          }
+        }
+      }
+      .hamburger_menu {
+        padding-left: 20px;
+        &_open {
+          visibility: visible;
+        }
+        &_close {
+          visibility: hidden;
+        }
+        .menutrigger {
+          width: 28px;
+          height: 28px;
+          cursor: pointer;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+      .close_menu {
+        position: fixed;
+        top: 12px;
+        opacity: 0;
+        visibility: hidden;
+        right: 29px;
+        z-index: -10;
+        &_open {
+          opacity: 1;
+          visibility: visible;
+          z-index: 9999;
+        }
+        &_close {
+          visibility: hidden;
+        }
+        .closeTrigger {
+          width: 28px;
+          height: 28px;
+          cursor: pointer;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.sticky_header {
+  background: #191919;
+  position: fixed;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.sticky_wrapper {
+  padding: 0;
+}

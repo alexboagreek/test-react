@@ -1,0 +1,31 @@
+.nav_item {
+  margin: 0 15px;
+  position: relative;
+
+  a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 20px 0;
+    display: inline-block;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: rgb(12, 112, 12);
+      transition: .3s;
+      bottom: 0;
+    }
+  }
+}
+
+.is-current {
+  a {
+    &::after {
+      width: 100%;
+    }
+  }
+}
